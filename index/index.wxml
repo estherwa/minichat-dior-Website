@@ -1,0 +1,29 @@
+
+<view>
+
+	<view class="screen screen1">
+
+
+  <shoppiong-bag>
+  
+  <view class ="shopping">🛒{{count}} </view>
+  </shoppiong-bag> 
+		<block wx:for="{{contacts}}" wx:key="id" wx:for-item="contact">
+			<view class="contact" bindtap="showNext" data-idx="{{contact}}">
+      
+				<share-element class="avatar" key="avatar" duration="{{duration}}" transform="{{transformIdx === index}}">
+					<image style="width: 150rpx;" mode="heightFix" src="../images/{{contact.img}}"></image>
+				</share-element>
+				<share-element duration="{{duration}}" class="name" key="name" transform="{{transformIdx === index}}">
+				</share-element>
+				<view class="list">
+          <my-component  name= "{{contact.name}} " price= "{{contact.price}} "   />
+				</view>
+			</view>
+		</block>
+	</view>
+
+</view>
+
+
+

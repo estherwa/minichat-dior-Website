@@ -1,0 +1,21 @@
+{
+  "pages":[
+    "index/index",
+    "components/shopping-bag/shopping_bag",
+    "components/share-element/index",
+    "components/details-component/details",
+    "components/my-component/my-component",
+    "components/button-component/button",
+
+    "index2/index2"
+  
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

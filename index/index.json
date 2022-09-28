@@ -1,0 +1,8 @@
+{
+ 
+  "usingComponents": {
+    "my-component": "../components/my-component/my-component",
+    "share-element":"../components/share-element/index",
+    "shoppiong-bag":"../components/shopping-bag/shopping_bag"
+  }
+}

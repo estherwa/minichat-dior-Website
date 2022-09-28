@@ -1,0 +1,8 @@
+
+<view class="wrapper">
+      <view>Product: {{name}}</view>
+      <view>Price: {{price}}</view>
+      
+  <slot></slot>
+  
+</view>
