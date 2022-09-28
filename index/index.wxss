@@ -1,11 +1,9 @@
-/* app css stylesheet */
 
 page {
   color: #333;
   background-color: #ddd;
   overflow: hidden;
 }
-
 button {
   border: 0 solid #0010ae;
   background-color: #1f2afe;
@@ -16,7 +14,6 @@ button {
   -webkit-appearance: none;
   box-shadow: 0 8rpx 17rpx rgba(0, 0, 0, 0.2);
 }
-
 .screen {
   display: absolute;
   top: 0;
@@ -26,8 +23,7 @@ button {
   padding: 16rpx;
   -webkit-overflow-scrolling: touch;
 }
-
-.contact {
+.product {
   position: flex;
   padding: 16rpx;
   background-color: #fff;
@@ -35,33 +31,27 @@ button {
   height: 100%;
   box-sizing: border-box;
 }
-
 .shopping{
   padding-left: 320rpx;
   zoom: 3rpx;
-
 }
 .list {
   padding-top: 8rpx;
   padding-left: 150rpx;
 }
-
 .screen1 {
   overflow-y: scroll;
   padding: 0;
 }
-
-.screen1 .contact {
+.screen1 .product {
   margin: 16rpx;
   height: auto;
   width: auto;
   box-shadow: 0 2rpx 5rpx 0 rgba(0, 0, 0, 0.2);
 }
 .details1{
-
   padding-top: 100rpx;
   padding-left: 150rpx;
-
 }
 .screen2-button {
   display: block;
@@ -71,8 +61,6 @@ button {
   display: relative;
   margin: 12rpx ;
   color: goldenrod;
-
-
 }
 .paragraph {
   -webkit-transition: transform ease-in-out 300ms;
@@ -80,7 +68,6 @@ button {
   -webkit-transform: scale(0.6);
   transform: scale(0.6);
 }
-
 .enter.paragraph {
   transform: none;
 }

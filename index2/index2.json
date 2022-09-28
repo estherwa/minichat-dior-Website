@@ -3,8 +3,5 @@
     "detail-component": "../components/details-component/details",
     "button-component": "../components/button-component/button",
     "share-element": "../components/share-element/index"
-
-    
-  
   }
 }

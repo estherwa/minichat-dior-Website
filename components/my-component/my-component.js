@@ -13,15 +13,7 @@ Component({
         value: 'default value'
       }
 },
-goNextPage(){
-  wx.navigateTo({
-    url: '../index2/index',
-  })
 
-},
-  /**
-   * Lifecycle function--Called when page load
-   */
   onLoad(options) {
 
   },

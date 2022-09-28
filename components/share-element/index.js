@@ -1,7 +1,7 @@
 // components/index.js
 Component({
   data: {
-      contacts:{}
+      products:{}
   },
   properties:{
   

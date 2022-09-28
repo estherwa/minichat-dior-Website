@@ -1,5 +1,6 @@
 <view class="wrapper">
-  
-  <slot></slot>
+
+  <button bindtap="ontap" type="primary">Tap</button>
+
   
 </view>

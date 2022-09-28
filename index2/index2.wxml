@@ -13,18 +13,15 @@
   bindclickoverlay="onClickOverlay"
 > 
 	<view class="screen screen2"> 
-		<view class="contact">
+		<view class="product">
 			<share-element class="avatar" duration="{{duration}}" key="avatar" transform>
-				<image style="width: 150rpx;" mode="heightFix" src="../images/{{contact.img}}" />
+				<image style="width: 150rpx;" mode="heightFix" src="../images/{{product.img}}" />
 			</share-element>
 			<share-element class="name" key="name" duration="{{duration}}" transform />
 			<view class="paragraph {{show ? 'enter' : ''}}">
-        <detail-component class="details1">Details: {{contact.details}}</detail-component>
+        <detail-component class="details1">Details: {{product.details}}</detail-component>
 			</view>
-
-      <button-component>
-			<button class="screen2-button" bindtap="showPrev"  hover-class="none">Go back </button>
-    </button-component>
+    <button-component/>
 		</view>
 	</view>
 </view>

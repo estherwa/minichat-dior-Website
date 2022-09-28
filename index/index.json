@@ -1,5 +1,4 @@
 {
- 
   "usingComponents": {
     "my-component": "../components/my-component/my-component",
     "share-element":"../components/share-element/index",

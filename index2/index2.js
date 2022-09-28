@@ -1,34 +1,21 @@
-import {contacts} from '../data/contact'
-
+import {products} from '../data/products'
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    contacts,
+    products,
     transformIdx: 0,
-    contact: contacts[0],
-
+    product: products[0],
     position: 'center',
     duration: 300,
     show: false,
     overlay: false,
-    
   },
-  
-
   showPrev() {
-
     wx.navigateTo({
       url: '../index/index',
     }),
-
     this.setData({
-  
     })
   },
-
   onLoad: function () {
     var that = this;
     wx.getStorage({
@@ -36,57 +23,24 @@ Page({
       success: function (res) {
         console.log(res)
         that.setData({
-         contact: res.data,
+         product: res.data,
         })
       }
     })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
-   
   },
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
-
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
   onHide: function () {
-
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
   onUnload: function () {
-
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
   onPullDownRefresh: function () {
-
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
   onReachBottom: function () {
-
   },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
-
   }
 })

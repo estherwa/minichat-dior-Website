@@ -1,22 +1,20 @@
 // components/button-component/button.js
 Component({
-  /**
-   * Component properties
-   */
-  properties: {
+data(){
+  products:{}
+},
+ontap() {
+  console.log('tap');
+},
+  // onTap:function () {
+  //   console.log('tap');
+  //   wx.navigateTo({
+  //     url: '/index/index',
+  //   }),
+  //   this.setData({
+  //   })
+  // },
 
-  },
-
-  /**
-   * Component initial data
-   */
-  data: {
-
-  },
-
-  /**
-   * Component methods
-   */
   methods: {
 
   }

@@ -6,9 +6,7 @@
     "components/details-component/details",
     "components/my-component/my-component",
     "components/button-component/button",
-
     "index2/index2"
-  
   ],
   "window":{
     "backgroundTextStyle":"light",
