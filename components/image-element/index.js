@@ -1,17 +1,13 @@
-// components/index.js
-Component({
-  data: {
-      products:{}
-  },
-  properties:{
-  
-},
-goNextPage(){
-  wx.navigateTo({
-    url: '../index2/index',
-  })
+// components/image-element/index.js
+Page({
 
-},
+  /**
+   * Page initial data
+   */
+  data: {
+
+  },
+
   /**
    * Lifecycle function--Called when page load
    */

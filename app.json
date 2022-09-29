@@ -2,9 +2,8 @@
   "pages":[
     "index/index",
     "components/shopping-bag/shopping_bag",
-    "components/share-element/index",
     "components/details-component/details",
-    "components/my-component/my-component",
+    "components/product-component/product-component",
     "components/button-component/button",
     "index2/index2"
   ],

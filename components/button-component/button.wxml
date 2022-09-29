@@ -1,6 +1,3 @@
 <view class="wrapper">
-
   <button  bindtap="ontap">Add to cart</button>
-
-  
 </view>

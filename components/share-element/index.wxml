@@ -1,6 +1,0 @@
-
-<view class="wrapper">
-  
-  <slot></slot>
-  
-</view>

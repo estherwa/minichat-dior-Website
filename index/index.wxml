@@ -12,7 +12,7 @@
 				<share-element duration="{{duration}}" class="name" key="name" transform="{{transformIdx === index}}">
 				</share-element>
 				<view class="list">
-          <my-component  name= "{{product.name}} " price= "{{product.price}} "   />
+          <product-component  name= "{{product.name}} " price= "{{product.price}} "   />
 				</view>
 			</view>
 		</block>
