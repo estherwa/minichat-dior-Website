@@ -5,7 +5,6 @@ Page({
     products,
     product: products[0],
     transformIdx: 0,
-    product:{},
     position: 'center',
     duration: 300,
     show: false,

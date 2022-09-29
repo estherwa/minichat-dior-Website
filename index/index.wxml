@@ -7,7 +7,7 @@
 		<block wx:for="{{products}}" wx:key="id" wx:for-item="product">
 			<view class="product" bindtap="showNext" data-idx="{{product}}">
 				<share-element class="avatar" key="avatar" duration="{{duration}}" transform="{{transformIdx === index}}">
-					<image style="width: 150rpx;" mode="heightFix" src="../images/{{product.img}}"></image>
+					<image style="width: 40rpx;"  style="height: 500rpx;"  src="../images/{{product.img}}"></image>
 				</share-element>
 				<share-element duration="{{duration}}" class="name" key="name" transform="{{transformIdx === index}}">
 				</share-element>

@@ -14,7 +14,7 @@
 	<view class="screen screen2"> 
 		<view class="product">
 			<share-element class="avatar" duration="{{duration}}" key="avatar" transform>
-				<image style="width: 150rpx;" mode="heightFix" src="../images/{{product.img}}" />
+				<image style="width: 70rpx;"  style="height: 500rpx;"  src="../images/{{product.img}}" />
 			</share-element>
 			<share-element class="name" key="name" duration="{{duration}}" transform />
 			<view class="paragraph {{show ? 'enter' : ''}}">

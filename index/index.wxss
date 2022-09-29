@@ -1,8 +1,7 @@
 
-page {
+ page {
   color: #333;
   background-color: #ddd;
-  overflow: hidden;
 }
 button {
   border: 0 solid #0010ae;
@@ -66,4 +65,4 @@ button {
 }
 .enter.paragraph {
   transform: none;
-}
+} 
