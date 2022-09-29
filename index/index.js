@@ -1,12 +1,7 @@
 import {products} from '../data/products'
 
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
     products,
     product: products[0],
     transformIdx: 0,
@@ -17,7 +12,6 @@ Page({
     overlay: false,
     count:0,
   },
-  
   goNextPage(){
     wx.navigateTo({
       url: '../index/index',
@@ -25,7 +19,6 @@ Page({
   },
   showNext(e) {
     const idx = e.currentTarget.dataset.idx
-
     this.setData({
       show: true,
       product: products[idx],
@@ -40,7 +33,6 @@ Page({
    wx.navigateTo({
     url: '../index2/index2',
   });
-
   },
   showPrev() {
     wx.navigateTo({
@@ -50,47 +42,4 @@ Page({
       show: false
     })
   },
-  onBeforeEnter(res) {
-    console.log(res)
-  },
-  onEnter(res) {
-    console.log(res)
-  },
-  onAfterEnter(res) {
-    console.log(res)
-  },
-  onBeforeLeave(res) {
-    console.log(res)
-  },
-  onLeave(res) {
-    console.log(res)
-  },
-  onAfterLeave(res) {
-    console.log(res)
-  },
-  onLoad: function (options) {
-    this.setData({
-      count:1
-    });
-    const aaa = "dsdsd"
-    console.log(this.data.count);
-    this.setData({
-      count:2
-    },() => console.log());
-    console.log(this.data.count);
-  },
-  onReady: function () {
-  },
-  onShow: function () {
-  },
-  onHide: function () {
-  },
-  onUnload: function () {
-  },
-  onPullDownRefresh: function () {
-  },
-  onReachBottom: function () {
-  },
-  onShareAppMessage: function () {
-  }
 })

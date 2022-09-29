@@ -20,7 +20,7 @@ button {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 16rpx;
+  padding: 36rpx;
   -webkit-overflow-scrolling: touch;
 }
 .product {
@@ -39,12 +39,8 @@ button {
   padding-top: 8rpx;
   padding-left: 150rpx;
 }
-.screen1 {
-  overflow-y: scroll;
-  padding: 0;
-}
 .screen1 .product {
-  margin: 16rpx;
+  margin: 19rpx;
   height: auto;
   width: auto;
   box-shadow: 0 2rpx 5rpx 0 rgba(0, 0, 0, 0.2);

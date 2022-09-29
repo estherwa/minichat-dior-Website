@@ -10,8 +10,7 @@
   bindbeforeleave="onBeforeLeave"
   bindleave="onLeave"
   bindafterleave="onAfterLeave"
-  bindclickoverlay="onClickOverlay"
-> 
+  bindclickoverlay="onClickOverlay"> 
 	<view class="screen screen2"> 
 		<view class="product">
 			<share-element class="avatar" duration="{{duration}}" key="avatar" transform>
