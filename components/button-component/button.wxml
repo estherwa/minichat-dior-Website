@@ -1,6 +1,6 @@
 <view class="wrapper">
 
-  <button bindtap="ontap" type="primary">Tap</button>
+  <button  bindtap="ontap">Add to cart</button>
 
   
 </view>
