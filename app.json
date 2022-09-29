@@ -1,11 +1,11 @@
 {
   "pages":[
-    "index/index",
+    "product-page/product-page",
     "components/shopping-bag/shopping_bag",
     "components/details-component/details",
     "components/product-component/product-component",
     "components/button-component/button",
-    "index2/index2"
+    "detail-page/detail-page"
   ],
   "window":{
     "backgroundTextStyle":"light",

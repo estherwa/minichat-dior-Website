@@ -16,7 +16,6 @@
 			<image-element class="avatar" duration="{{duration}}" key="avatar" transform>
 				<image style="width: 0rpx;"  style="height: 500rpx;"  src="../images/{{product.img}}" />
 			</image-element>
-			<!-- <share-element class="name" key="name" duration="{{duration}}" transform /> -->
 			<view class="paragraph {{show ? 'enter' : ''}}">
         <detail-component class="details1">Details: {{product.details}}</detail-component>
 			</view>

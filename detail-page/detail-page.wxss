@@ -39,3 +39,21 @@ button {
   -webkit-transform: scale(0.6);
   transform: scale(0.7);
 }
+.screen {
+  display: absolute;
+  padding: 36rpx  ;
+}
+.product {
+  display: flex;
+  padding: 16rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.screen1 .product {
+  margin: 19rpx;
+  height: auto;
+  width: auto;
+  box-shadow: 0 2rpx 5rpx 0 rgba(0, 0, 0, 0.2);
+}
+
+ 

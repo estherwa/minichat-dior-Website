@@ -1,5 +1,4 @@
 import {products} from '../data/products'
-
 Page({
   data: {
     products,
@@ -13,7 +12,7 @@ Page({
   },
   goNextPage(){
     wx.navigateTo({
-      url: '../index/index',
+      url: '../product-page/product-page',
     })
   },
   showNext(e) {
@@ -30,12 +29,12 @@ Page({
      }
    })
    wx.navigateTo({
-    url: '../index2/index2',
+    url: '../detail-page/detail-page',
   });
   },
   showPrev() {
     wx.navigateTo({
-      url: '../index/index',
+      url: '../product-page/product-page',
     }),
     this.setData({
       show: false

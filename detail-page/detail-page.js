@@ -11,7 +11,7 @@ Page({
   },
   showPrev() {
     wx.navigateTo({
-      url: '../index/index',
+      url: '../product-page/product-page',
     }),
     this.setData({
     })

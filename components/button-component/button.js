@@ -9,7 +9,7 @@ ontap() {
   // onTap:function () {
   //   console.log('tap');
   //   wx.navigateTo({
-  //     url: '/index/index',
+  //     url: '/product-page/product-page',
   //   }),
   //   this.setData({
   //   })

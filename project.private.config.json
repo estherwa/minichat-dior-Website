@@ -9,14 +9,14 @@
       "list": [
         {
           "name": "",
-          "pathName": "index/index2",
+          "pathName": "product-page/detail-page",
           "query": "",
           "launchMode": "default",
           "scene": null
         },
         {
           "name": "",
-          "pathName": "index2/index",
+          "pathName": "detail-page/product-page",
           "query": "",
           "launchMode": "default",
           "scene": null

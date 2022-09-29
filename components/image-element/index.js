@@ -1,4 +1,4 @@
-// components/image-element/index.js
+// components/image-element/product-page.js
 Page({
 
   /**
