@@ -28,8 +28,17 @@
   box-shadow: 0 2rpx 5rpx 0 rgba(0, 0, 0, 0.2);
 }
 .details1{
-  padding-top: 100rpx;
-  padding-left: 150rpx;
+  padding-top: 0rpx;
+  padding-left: 50rpx;
+}
+
+.details2{
+
+
+  padding: 30rpx;
+ 
+  font-style: oblique;
+
 }
 .paragraph {
   -webkit-transition: transform ease-in-out 300ms;

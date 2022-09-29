@@ -1,4 +1,5 @@
 import {products} from '../data/products'
+
 Page({
   data: {
     products,
@@ -19,8 +20,6 @@ Page({
     const idx = e.currentTarget.dataset.idx
     this.setData({
       show: true,
-      product: products[idx],
-      transformIdx: idx,
       count:this.data.count+1
     })
     wx.setStorage({ key: 'idx', data: e.currentTarget.dataset.idx,

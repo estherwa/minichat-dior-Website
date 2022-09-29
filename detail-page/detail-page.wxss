@@ -25,6 +25,7 @@ button {
   overflow-y: scroll;
 }
 .details1{
+  font-style: oblique;
   display:flex;
   flex:1;
   flex-direction:column;
@@ -41,7 +42,7 @@ button {
 }
 .screen {
   display: absolute;
-  padding: 36rpx  ;
+  padding: 66rpx  ;
 }
 .product {
   display: flex;
