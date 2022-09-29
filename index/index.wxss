@@ -3,31 +3,14 @@
   color: #333;
   background-color: #ddd;
 }
-button {
-  border: 0 solid #0010ae;
-  background-color: #1f2afe;
-  color: #fff;
-  font-size: 120%;
-  padding: 8rpx 16rpx;
-  outline-width: 0;
-  -webkit-appearance: none;
-  box-shadow: 0 8rpx 17rpx rgba(0, 0, 0, 0.2);
-}
 .screen {
   display: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 36rpx;
-  -webkit-overflow-scrolling: touch;
+  padding: 36rpx  ;
 }
 .product {
-  position: flex;
+  display: flex;
   padding: 16rpx;
   background-color: #fff;
-  width: 100%;
-  height: 100%;
   box-sizing: border-box;
 }
 .shopping{
@@ -48,21 +31,10 @@ button {
   padding-top: 100rpx;
   padding-left: 150rpx;
 }
-.screen2-button {
-  display: block;
-  margin: 24rpx auto;
-}
-.screen-button {
-  display: relative;
-  margin: 12rpx ;
-  color: goldenrod;
-}
 .paragraph {
   -webkit-transition: transform ease-in-out 300ms;
   transition: transform ease-in-out 300ms;
   -webkit-transform: scale(0.6);
   transform: scale(0.6);
 }
-.enter.paragraph {
-  transform: none;
-} 
+ 

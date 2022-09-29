@@ -18,7 +18,7 @@ button {
   display:flex;
   flex:1;
   flex-direction:column;
-  padding:0 19px 19px 0;
+  padding:0 19rpx 19rpx 0;
   background-color: #fff;
 }
 .screen1 {
@@ -28,7 +28,7 @@ button {
   display:flex;
   flex:1;
   flex-direction:column;
-  padding:0 10px 10px 0;
+  padding:0 10rpx 10rpx 0;
   scale: 30rpx;
 }
 .paragraph {
