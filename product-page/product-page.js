@@ -17,12 +17,24 @@ Page({
     });
   },
   showNext(e) {
-    const idx = e.currentTarget.dataset.idx;
     this.setData({
       show: true,
       count: this.data.count + 1,
     });
-  util.setStorage(e);
+
+      let key= "idx";
+      let dataSet=e.currentTarget.dataset.idx;
+        util.setStorage({dataSet,key,success:(res) => {
+        
+          key: key
+          data: e.currentTarget.dataset.idx
+
+
+         } })
+
+
+
+
     wx.navigateTo({
       url: "../detail-page/detail-page",
     });

@@ -3,13 +3,10 @@ function getStorage({key,success}) {
       success,
       key})
 }
-function setStorage(e) {
+function setStorage({dataSet, key,success}) {
   wx.setStorage({
-    key: "idx",
-    data: e.currentTarget.dataset.idx,
-    success: function (res) {
-
-    },
+    key,
+    data: dataSet,
   });
 }
 module.exports = {
