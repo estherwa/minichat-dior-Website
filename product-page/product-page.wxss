@@ -1,11 +1,10 @@
-
- page {
+page {
   color: #333;
   background-color: #ddd;
 }
 .screen {
   display: absolute;
-  padding: 36rpx  ;
+  padding: 36rpx;
 }
 .product {
   display: flex;
@@ -13,7 +12,7 @@
   background-color: #fff;
   box-sizing: border-box;
 }
-.shopping{
+.shopping {
   padding-left: 320rpx;
   zoom: 3rpx;
 }
@@ -27,18 +26,14 @@
   width: auto;
   box-shadow: 0 2rpx 5rpx 0 rgba(0, 0, 0, 0.2);
 }
-.details1{
+.details1 {
   padding-top: 0rpx;
   padding-left: 50rpx;
 }
 
-.details2{
-
-
+.details2 {
   padding: 30rpx;
- 
   font-style: oblique;
-
 }
 .paragraph {
   -webkit-transition: transform ease-in-out 300ms;
@@ -46,4 +41,3 @@
   -webkit-transform: scale(0.6);
   transform: scale(0.6);
 }
- 

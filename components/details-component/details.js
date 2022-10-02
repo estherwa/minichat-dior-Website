@@ -1,23 +1,8 @@
-// components/details-component/details.js
 Component({
-  /**
-   * Component properties
-   */
+  data:{} ,
   properties: {
-
-  },
-
-  /**
-   * Component initial data
-   */
-  data: {
-
-  },
-
-  /**
-   * Component methods
-   */
-  methods: {
-
-  }
-})
+    details:{
+      type:String, 
+      value: 'details of the bag'},
+   
+}})

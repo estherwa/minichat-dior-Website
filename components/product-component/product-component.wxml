@@ -1,4 +1,3 @@
-
 <view class="detail">
       <view>Product: {{name}}</view>
       <view>Price: {{price}}</view>

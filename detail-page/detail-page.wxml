@@ -13,8 +13,7 @@
   bindleave="onLeave"
   bindafterleave="onAfterLeave"
   bindclickoverlay="onClickOverlay"> 
-  <shoppiong-bag>
-  </shoppiong-bag> 
+  <shopping-bag/> 
   <view> {{count}}</view>
 	<view class="screen screen2"> 
 		<view class="product">
@@ -22,9 +21,8 @@
 				<image style="width: 0rpx;"  style="height: 500rpx;"  src="../images/{{product.img}}" />
 			</image-element>
 			<view class="paragraph {{show ? 'enter' : ''}}">
-        <detail-component class="details1">Details: {{product.details}}</detail-component>
+        <detail-component class="details1" details= "{{product.details}}" />
 			</view>
-
     <button-component  title="Add to cart"/>
 		</view>
 	</view>

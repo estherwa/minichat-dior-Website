@@ -1,3 +1,3 @@
 <view class="wrapper">
-  <button bindtap="onTap">Add to cart</button>
+  <button bindtap="onTap">{{ title}}</button>
 </view>

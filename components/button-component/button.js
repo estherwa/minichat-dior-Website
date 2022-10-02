@@ -1,14 +1,15 @@
 Component({
-  data:{
-    count:[]
-  },
+  data:{} ,
   properties: {
+    title:{
+      type:String, 
+      value: 'add to cart'},
     count:{
     type:String, 
     value: 'default value'},},
   methods: {
-    onTap: function(){
-      var myEventDetail = {} // detail object, provided to the event monitoring function
+    onTap: function(e){
+      const myEventDetail = {} // detail object, provided to the event monitoring function
       var myEventOption = {} // Event triggering options
       this.triggerEvent('myevent', myEventDetail, myEventOption)
       wx.navigateTo({

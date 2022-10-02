@@ -1,4 +1,5 @@
 import {products} from '../data/products'
+var util = require('../utils/util')
 Page({
   data: {
     products,
@@ -17,15 +18,7 @@ Page({
     })
   },
   onLoad: function () {
-    var that = this;
-    wx.getStorage({
-      key: 'idx',
-      success: function (res) {
-        console.log(res)
-        that.setData({
-         product: res.data,
-        })
-      }
-    })
-  },
+    let that= this;
+    util.getStorage(that);
+  }
 })

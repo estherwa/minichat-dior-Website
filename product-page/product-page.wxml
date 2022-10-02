@@ -1,10 +1,8 @@
-
 <view>
 	<view class="screen screen1">
   <shoppiong-bag>
   <view class ="shopping">🛒{{count}} </view>
   </shoppiong-bag> 
- 
 		<block wx:for="{{products}}" wx:key="id" wx:for-item="product">
 			<view class="product" bindtap="showNext" data-idx="{{product}}">
 				<share-element class="avatar" key="avatar" duration="{{duration}}" transform="{{transformIdx === product-page}}">
@@ -13,9 +11,6 @@
 				</share-element>
 				<share-element duration="{{duration}}" class="name" key="name" transform="{{transformIdx === product-page}}">
 				</share-element>
-			
-         
-			
 			</view>
 		</block>
 	</view>
