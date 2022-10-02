@@ -17,24 +17,16 @@ Page({
     this.setData({
     })
   },
+
   onLoad: function () {
-    // util.getStorage()
-
-    var that= this;
-    function getStorage() {
-      console.log("hello");
-    
-      wx.getStorage({
-        key: "idx",
-        success: function (res) {
-          that.setData({
+    let that= this;
+    let key= "idx"
+    util.getStorage({key,success:(res) => {
+        that.setData({
+            product: res.data
           })
-          that.setData({
-             product: res.data,
-            })
-        },
-      });
-    }
+    }});
 
-  },
+  }
 })
+//-------------------------------------------------------------------------------------------------------
