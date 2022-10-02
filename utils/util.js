@@ -1,32 +1,18 @@
-function getStorage(that) {
-  console.log("hello");
-
+function getStorage({key,success}) {
   wx.getStorage({
-    key: "idx",
-    success: function (res) {
-      that.setData({
-      })
-      that.setData({
-         product: res.data,
-        })
-    },
-  })
+      success,
+      key})
 }
-
 function setStorage(e) {
   wx.setStorage({
     key: "idx",
     data: e.currentTarget.dataset.idx,
     success: function (res) {
-      console.log(res);
+
     },
   });
 }
-
-
-
 module.exports = {
   getStorage: getStorage,
   setStorage: setStorage
-
 };

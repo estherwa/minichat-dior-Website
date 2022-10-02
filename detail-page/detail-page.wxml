@@ -1,5 +1,3 @@
-
-
 <view
 	show="{{show}}"
 	overlay="{{overlay}}"
@@ -21,7 +19,7 @@
 				<image style="width: 0rpx;"  style="height: 500rpx;"  src="../images/{{product.img}}" />
 			</image-element>
 			<view class="paragraph {{show ? 'enter' : ''}}">
-        <detail-component class="details1" details= "{{product.details}}" />
+        <detail-component class="product-detail" details= "{{product.details}}" />
 			</view>
     <button-component  title="Add to cart"/>
 		</view>

@@ -1,6 +1,6 @@
 page {
-  color: #333;
-  background-color: #ddd;
+  color: black;
+  background-color: white;
 }
 .screen {
   display: absolute;
@@ -9,7 +9,7 @@ page {
 .product {
   display: flex;
   padding: 16rpx;
-  background-color: #fff;
+  background-color: white;
   box-sizing: border-box;
 }
 .shopping {
@@ -26,12 +26,7 @@ page {
   width: auto;
   box-shadow: 0 2rpx 5rpx 0 rgba(0, 0, 0, 0.2);
 }
-.details1 {
-  padding-top: 0rpx;
-  padding-left: 50rpx;
-}
-
-.details2 {
+.products {
   padding: 30rpx;
   font-style: oblique;
 }

@@ -18,7 +18,23 @@ Page({
     })
   },
   onLoad: function () {
-    let that= this;
-    util.getStorage(that);
-  }
+    // util.getStorage()
+
+    var that= this;
+    function getStorage() {
+      console.log("hello");
+    
+      wx.getStorage({
+        key: "idx",
+        success: function (res) {
+          that.setData({
+          })
+          that.setData({
+             product: res.data,
+            })
+        },
+      });
+    }
+
+  },
 })
