@@ -5,7 +5,7 @@
   </shoppiong-bag> 
 		<block wx:for="{{products}}" wx:key="id" wx:for-item="product">
 			<view class="product" bindtap="showNext" data-idx="{{product}}">
-				<share-element class="avatar" key="avatar" duration="{{duration}}" transform="{{transformIdx === product-page}}">
+			<share-element class="avatar" key="avatar" duration="{{duration}}" transform="{{transformIdx === product-page}}">
           <product-component  class="products"  name= "{{product.name}} " price= "{{product.price}} "/>
 					<image style="width: 40rpx;"  style="height: 500rpx;"  src="../images/{{product.img}}"></image>
 				</share-element>
