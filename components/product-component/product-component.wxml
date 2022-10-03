@@ -1,4 +1,4 @@
-<view class="detail">
+<view>
       <view>Product: {{name}}</view>
       <view>Price: {{price}}</view>
   <slot></slot>

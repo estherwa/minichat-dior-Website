@@ -14,7 +14,6 @@ Page({
   },
   goNextPage() {
     const url="../product-page/product-page";
-
     navigate({
       url, 
       success:(res) =>{
@@ -51,12 +50,9 @@ Page({
             console.log(data)
           }
         }})
-
-
   },
   showPrev() {
    const url="../product-page/product-page";
-
     navigate({
       url, 
       success:(res) =>{

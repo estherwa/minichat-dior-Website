@@ -9,16 +9,12 @@ function setStorage({dataSet, key}) {
     data: dataSet,
   });
 }
-
 function navigate({url, success, events}){
   wx.navigateTo({
     url,
     events,
     success
   })
-
-
-
 }
 module.exports = {
   getStorage: getStorage,
