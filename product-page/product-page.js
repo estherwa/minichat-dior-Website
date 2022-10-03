@@ -1,5 +1,6 @@
 import { products } from "../data/products";
-var util = require('../utils/util')
+import {setStorage} from "../utils/util";
+import {navigate} from '../utils/util'
 Page({
   data: {
     products,
@@ -12,37 +13,63 @@ Page({
     count: 0,
   },
   goNextPage() {
-    wx.navigateTo({
-      url: "../product-page/product-page",
-    });
+    const url="../product-page/product-page";
+
+    navigate({
+      url, 
+      success:(res) =>{
+        res.eventChannel.emit('acceptDataFromOpenerPage')
+      }, 
+      events:{ 
+        acceptDataFromOpenedPage: function(data) {
+          console.log(data)
+        },
+        someEvent: function(data) {
+          console.log(data)
+        }
+      }})
   },
   showNext(e) {
     this.setData({
       show: true,
       count: this.data.count + 1,
     });
+      const key= "idx";
+      const dataSet=e.currentTarget.dataset.idx;
+      setStorage({dataSet,key})
+      const url="../detail-page/detail-page";
+      navigate({
+        url, 
+        success:(res) =>{
+          res.eventChannel.emit('acceptDataFromOpenerPage')
+        }, 
+        events:{ 
+          acceptDataFromOpenedPage: function(data) {
+            console.log(data)
+          },
+          someEvent: function(data) {
+            console.log(data)
+          }
+        }})
 
-      let key= "idx";
-      let dataSet=e.currentTarget.dataset.idx;
-        util.setStorage({dataSet,key,success:(res) => {
-        
-          key: key
-          data: e.currentTarget.dataset.idx
 
-
-         } })
-
-
-
-
-    wx.navigateTo({
-      url: "../detail-page/detail-page",
-    });
   },
   showPrev() {
-    wx.navigateTo({
-      url: "../product-page/product-page",
-    }),
+   const url="../product-page/product-page";
+
+    navigate({
+      url, 
+      success:(res) =>{
+        res.eventChannel.emit('acceptDataFromOpenerPage')
+      }, 
+      events:{ 
+        acceptDataFromOpenedPage: function(data) {
+          console.log(data)
+        },
+        someEvent: function(data) {
+          console.log(data)
+        }
+      }})
       this.setData({
         show: false,
       });

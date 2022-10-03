@@ -1,5 +1,6 @@
 import {products} from '../data/products'
-var util = require('../utils/util')
+import {getStorage} from '../utils/util'
+import {navigate} from '../utils/util'
 Page({
   data: {
     products,
@@ -11,16 +12,25 @@ Page({
     overlay: false,
   },
   showPrev() {
-    wx.navigateTo({
-      url: '../product-page/product-page',
-    }),
-    this.setData({
-    })
+    const url='../product-page/product-page';
+    navigate({
+    url, 
+    success:(res) =>{
+      res.eventChannel.emit('acceptDataFromOpenerPage')
+    }, 
+    events:{ 
+      acceptDataFromOpenedPage: function(data) {
+        console.log(data)
+      },
+      someEvent: function(data) {
+        console.log(data)
+      }
+    }})
   },
   onLoad: function () {
-    let that= this;
-    let key= "idx"
-    util.getStorage({key,success:(res) => {
+    const that= this;
+    const key= "idx"
+    getStorage({key,success:(res) => {
         that.setData({
             product: res.data
           })
