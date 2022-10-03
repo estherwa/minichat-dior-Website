@@ -1,4 +1,4 @@
-# minichat-dior-Website
+# Dior Website using taro & mina Framework
 
 ![FormExample](/image/im1.png)
 
