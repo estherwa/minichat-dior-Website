@@ -1,0 +1,4 @@
+.shopping {
+  padding-left: 320rpx;
+  zoom: 3rpx;
+}

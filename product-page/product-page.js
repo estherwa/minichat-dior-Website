@@ -1,4 +1,4 @@
-import { products } from "../data/products";
+import {products} from "../data/products";
 import {setStorage} from "../utils/util";
 import {navigate} from '../utils/util'
 Page({
@@ -33,24 +33,24 @@ Page({
       show: true,
       count: this.data.count + 1,
     });
-      const key= "idx";
-      const dataSet=e.currentTarget.dataset.idx;
-      setStorage({dataSet,key})
+    const key= "idx";
+    const dataSet=e.currentTarget.dataset.idx;
       const url="../detail-page/detail-page";
-      navigate({
-        url, 
+      wx.navigateTo({
+        url:url, 
         success:(res) =>{
-          res.eventChannel.emit('acceptDataFromOpenerPage')
+          res.eventChannel.emit(setStorage({dataSet,key}))
         }, 
         events:{ 
           acceptDataFromOpenedPage: function(data) {
-            console.log(data)
           },
           someEvent: function(data) {
             console.log(data)
           }
         }})
   },
+
+  
   showPrev() {
    const url="../product-page/product-page";
     navigate({

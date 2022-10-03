@@ -27,13 +27,24 @@ Page({
       }
     }})
   },
-  onLoad: function () {
+  onLoad: function (option) {
     const that= this;
     const key= "idx"
-    getStorage({key,success:(res) => {
+
+    const eventChannel = this.getOpenerEventChannel()
+    eventChannel.emit('acceptDataFromOpenedPage', {data:
+      getStorage({key,success:(res) => {
         that.setData({
             product: res.data
           })
-    }});
+      }})
+    });
+    eventChannel.on('acceptDataFromOpenerPage', function(dataa) {
+      //here we get informaton of the other page
+      console.log(dataa)
+    })
+    
+
+
   }
 })
