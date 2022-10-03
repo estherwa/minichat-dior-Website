@@ -35,7 +35,7 @@ Page({
     });
     const dataSet=e.currentTarget.dataset.idx;
       const url="../detail-page/detail-page";
-      wx.navigateTo({
+      navigate({
         url:url, 
         
         success:(res) =>{
