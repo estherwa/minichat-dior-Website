@@ -39,10 +39,12 @@ Page({
         url:url, 
         success:(res) =>{
           res.eventChannel.emit( 
-            wx.setStorage({
-              key:"idx",
-            data: dataSet,
-          }))
+           
+            "sendData" ,{ key:"idx",
+            data: dataSet}
+           
+           
+            )
         }, 
         events:{ 
           acceptDataFromOpenedPage: function(data) {

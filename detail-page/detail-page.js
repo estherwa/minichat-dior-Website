@@ -31,18 +31,9 @@ Page({
     const that= this;
     const key= "idx"
     const eventChannel = this.getOpenerEventChannel()
-    eventChannel.emit('acceptDataFromOpenedPage', {data:
-      wx.getStorage({key,success:(res) => {
-        that.setData({
-            product: res.data
-          })
-      }})
-    });
-    eventChannel.on('acceptDataFromOpenerPage', function(dataa) {
-
-      
-      //here we get informaton of the oter pag
-      console.log(dataa)
+    eventChannel.on('sendData', function(data) {
+      console.log(data)
+      that.setData({product: data.data})
     })
     
 
