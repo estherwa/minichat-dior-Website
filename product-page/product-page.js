@@ -37,7 +37,6 @@ Page({
       const url="../detail-page/detail-page";
       navigate({
         url:url, 
-        
         success:(res) =>{
           res.eventChannel.emit( 
             wx.setStorage({
@@ -53,8 +52,6 @@ Page({
           }
         }})
   },
-
-
   showPrev() {
    const url="../product-page/product-page";
     navigate({
