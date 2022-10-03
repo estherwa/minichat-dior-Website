@@ -1,5 +1,5 @@
 import {products} from '../data/products'
-import {getStorage} from '../utils/util'
+// import {getStorage} from '../utils/util'
 import {navigate} from '../utils/util'
 Page({
   data: {
@@ -30,17 +30,18 @@ Page({
   onLoad: function (option) {
     const that= this;
     const key= "idx"
-
     const eventChannel = this.getOpenerEventChannel()
     eventChannel.emit('acceptDataFromOpenedPage', {data:
-      getStorage({key,success:(res) => {
+      wx.getStorage({key,success:(res) => {
         that.setData({
             product: res.data
           })
       }})
     });
     eventChannel.on('acceptDataFromOpenerPage', function(dataa) {
-      //here we get informaton of the other page
+
+      
+      //here we get informaton of the oter pag
       console.log(dataa)
     })
     

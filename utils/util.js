@@ -1,14 +1,14 @@
-function getStorage({key,success}) {
-  wx.getStorage({
-      success,
-      key})
-}
-function setStorage({dataSet, key}) {
-  wx.setStorage({
-    key,
-    data: dataSet,
-  });
-}
+// function getStorage({key,success}) {
+//   wx.getStorage({
+//       success,
+//       key})
+// }
+// function setStorage({dataSet, key}) {
+//   wx.setStorage({
+//     key,
+//     data: dataSet,
+//   });
+// }
 function navigate({url, success, events}){
   wx.navigateTo({
     url,
@@ -17,7 +17,7 @@ function navigate({url, success, events}){
   })
 }
 module.exports = {
-  getStorage: getStorage,
-  setStorage: setStorage,
+  // getStorage: getStorage,
+  // setStorage: setStorage,
   navigate:  navigate
 };

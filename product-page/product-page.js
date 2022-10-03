@@ -1,5 +1,5 @@
 import {products} from "../data/products";
-import {setStorage} from "../utils/util";
+// import {setStorage} from "../utils/util";
 import {navigate} from '../utils/util'
 Page({
   data: {
@@ -33,13 +33,17 @@ Page({
       show: true,
       count: this.data.count + 1,
     });
-    const key= "idx";
     const dataSet=e.currentTarget.dataset.idx;
       const url="../detail-page/detail-page";
       wx.navigateTo({
         url:url, 
+        
         success:(res) =>{
-          res.eventChannel.emit(setStorage({dataSet,key}))
+          res.eventChannel.emit( 
+            wx.setStorage({
+              key:"idx",
+            data: dataSet,
+          }))
         }, 
         events:{ 
           acceptDataFromOpenedPage: function(data) {
@@ -50,7 +54,7 @@ Page({
         }})
   },
 
-  
+
   showPrev() {
    const url="../product-page/product-page";
     navigate({
