@@ -35,8 +35,6 @@ Page({
     eventChannel.once('sendData', function(data) {
       success: (data) =>  { console.log(' The request is successful',data.data);
      } 
-       that.setData({product:data.data })       
-      console.log(data)
       that.setData({product: data.data})
     })}
 
