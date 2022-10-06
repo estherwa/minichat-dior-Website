@@ -1,6 +1,7 @@
 import {products} from '../data/products'
 // import {getStorage} from '../utils/util'
 import {navigate} from '../utils/util'
+import {event} from '../utils/event'
 Page({
   data: {
     products,
@@ -30,19 +31,52 @@ Page({
   onLoad: function (option) {
     const that= this;
     const key= "idx"
-    const eventChannel = this.getOpenerEventChannel()
-    
-    eventChannel.once('sendData', function(data) {
-      success: (data) =>  { console.log(' The request is successful',data.data);
-     } 
-      that.setData({product: data.data})
-    })}
+   // const eventChannel = this.getOpenerEventChannel()
+    event({
+        success:(res) =>{
+          
+        }, 
+        events:{ 
+          sendData: function(data) {
+            that.setData({product: data.data})
+          }
+    }}
+    )}
 
-    // wx.navigateTo({url: '../product-page/product-page',            success: function(res) {        
-    //      res.eventChannel.once('sendData', function(data) {
-    //       success: (data) =>  { console.log(' The request is successful',data.data);
-    //      } 
-    //        that.setData({product:data.data })} )}}
+
+
+
+
+
+
+
+
+
+
+
+    
+    // eventChannel.once('sendData', function(data) {
+    //   success: (data) =>  { console.log(' The request is successful',data.data);
+    //  } 
+    //   that.setData({product: data.data})
+    // })}
+// sent data on util everything of event , event.js
+  
+    // event({
+      // success:(res) => {
+      //   eventChannel.once('sendData', function(data) {
+      //     { 
+      //       console.log(' The request is successful',data.data);
+      //      that.setData({product: data.data})
+
+      //   }})}
+    // })
+    // navigate({url: '../product-page/product-page',            
+    //   success: function(res) {        
+    //       res.eventChannel.once('sendData', function(data) {
+    //         success: (data) =>  { console.log(' The request is successful',data.data);
+    //       } 
+    //         that.setData({product:data.data })} )}}
     // )}
   
 })
