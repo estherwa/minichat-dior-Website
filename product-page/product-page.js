@@ -39,11 +39,8 @@ Page({
         url:url, 
         success:(res) =>{
           res.eventChannel.emit( 
-           
             "sendData" ,{ key:"idx",
             data: dataSet}
-           
-           
             )
         }, 
         events:{ 

@@ -31,12 +31,20 @@ Page({
     const that= this;
     const key= "idx"
     const eventChannel = this.getOpenerEventChannel()
-    eventChannel.on('sendData', function(data) {
+    
+    eventChannel.once('sendData', function(data) {
+      success: (data) =>  { console.log(' The request is successful',data.data);
+     } 
+       that.setData({product:data.data })       
       console.log(data)
       that.setData({product: data.data})
-    })
-    
+    })}
 
-
-  }
+    // wx.navigateTo({url: '../product-page/product-page',            success: function(res) {        
+    //      res.eventChannel.once('sendData', function(data) {
+    //       success: (data) =>  { console.log(' The request is successful',data.data);
+    //      } 
+    //        that.setData({product:data.data })} )}}
+    // )}
+  
 })
