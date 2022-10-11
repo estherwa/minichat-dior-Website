@@ -14,8 +14,18 @@
   bindafterleave="onAfterLeave"
   bindclickoverlay="onClickOverlay"> 
   <shopping-bag/> 
-  <view> {{count}}</view>
 	<view class="screen screen2"> 
+		<!-- <view class="product">
+     
+			<image-element class="avatar" duration="{{duration}}" key="avatar" transform>
+				<image style="width: 0rpx;"  style="height: 500rpx;"  src="../images/{{product.img}}" />
+			</image-element>
+			<view class="paragraph {{show ? 'enter' : ''}}">
+        <detail-component class="product-detail" details= "{{product.details}}" />
+			</view>
+		</view> -->
+  
+  	<view class="screen screen2"> 
 		<view class="product">
 			<image-element class="avatar" duration="{{duration}}" key="avatar" transform>
 				<image style="width: 0rpx;"  style="height: 500rpx;"  src="../images/{{product.img}}" />
@@ -23,6 +33,8 @@
 			<view class="paragraph {{show ? 'enter' : ''}}">
         <detail-component class="product-detail" details= "{{product.details}}" />
 			</view>
+    <button-component id_bag="{{product.id}}" title="Add to wish list"/>
 		</view>
-	</view>
+</view>
+</view>
 </view>

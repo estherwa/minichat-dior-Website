@@ -30,15 +30,27 @@ Page({
     }})
   },
   onLoad: function (option) {
-    if (Database.length==0)
-      console.log("its empty;")
-    else
-      console.log("there are items");
+    const that= this;
    const eventChannel = this.getOpenerEventChannel()
    eventChannel.on( 'sendID' ,  function  ( data )  {
-    console.log(data); 
+    console.log("data que temnemos", data); 
     page_data = data; 
-})
+    Database[Database.length]= page_data;
+    that.setData({product: products[data.data-1]})
+    })
+    
+    if (Database.length==0)
+    console.log("its empty;")
+  else
+    console.log("there are items");
+
+   // that.setData({product: Database[Database.length]})
+
+    // for(let i=0; i<Database.length;i++)
+    // console.log("items",Database[i]) 
+    
+    
+
 }
-  
+ 
 })
