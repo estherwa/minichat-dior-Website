@@ -1,6 +1,8 @@
 <view>
-	<view class="screen screen1">
+	<view class="screen screen1"> 
+  <button bindtap="onTap">Wishing list</button>
   <shoppiong-bag/> 
+
 		<block wx:for="{{products}}" wx:key="id" wx:for-item="product">
 			<view class="product" bindtap="showNext" data-idx="{{product}}">
 			<share-element class="avatar" key="avatar" duration="{{duration}}" transform="{{transformIdx === product-page}}">
@@ -8,7 +10,10 @@
 					<image style="width: 40rpx;"  style="height: 500rpx;"  src="../images/{{product.img}}"></image>
 				</share-element>
 				<share-element duration="{{duration}}" class="name" key="name" transform="{{transformIdx === product-page}}">
+        
 				</share-element>
+
+      
 			</view>
 		</block>
 	</view>

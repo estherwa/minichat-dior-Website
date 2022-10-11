@@ -5,7 +5,8 @@
     "components/details-component/details",
     "components/product-component/product-component",
     "components/button-component/button",
-    "detail-page/detail-page"
+    "detail-page/detail-page",
+    "wishList-page/wishList-page"
   ],
   "window": {
     "backgroundTextStyle": "light",

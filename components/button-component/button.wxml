@@ -1,3 +1,4 @@
 <view class="wrapper">
   <button bindtap="onTap">{{title}}</button>
+  <view>{{id_bag}}</view>
 </view>

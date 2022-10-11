@@ -1,3 +1,5 @@
+<!--wishList-page/wishList-page.wxml-->
+<text>Your wishing list is empty please choose some products!</text>
 <view
 	show="{{show}}"
 	overlay="{{overlay}}"
@@ -21,8 +23,6 @@
 			<view class="paragraph {{show ? 'enter' : ''}}">
         <detail-component class="product-detail" details= "{{product.details}}" />
 			</view>
-      
-    <button-component id_bag="{{product.id}}" title="Add to wish list"/>
 		</view>
 	</view>
 </view>

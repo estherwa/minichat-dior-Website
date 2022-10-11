@@ -1,5 +1,4 @@
 import {products} from "../data/products";
-// import {setStorage} from "../utils/util";
 import {navigate} from '../utils/util'
 Page({
   data: {
@@ -12,6 +11,14 @@ Page({
     overlay: false,
     count: 0,
   },
+  onTap(){
+    const url="../wishList-page/wishList-page";
+    navigate({
+      url, 
+      success:(res) =>{
+        res.eventChannel.emit('acceptDataFromOpenerPage')
+      },
+  })},
   goNextPage() {
     const url="../product-page/product-page";
     navigate({

@@ -1,6 +1,8 @@
 import {products} from '../data/products'
 import {navigate} from '../utils/util'
 import {once} from '../utils/event'
+let  page_data;
+const Database=[];
 Page({
   data: {
     products,
@@ -28,13 +30,15 @@ Page({
     }})
   },
   onLoad: function (option) {
-    const that= this;
-    const key= "idx"
+    if (Database.length==0)
+      console.log("its empty;")
+    else
+      console.log("there are items");
    const eventChannel = this.getOpenerEventChannel()
-    eventChannel.once('sendData', function(data) {
-      success: (data) =>  { console.log(' The request is successful',data.data);
-     } 
-      that.setData({product: data.data})
-      console.log(data.data.id)
-    })}
+   eventChannel.on( 'sendID' ,  function  ( data )  {
+    console.log(data); 
+    page_data = data; 
+})
+}
+  
 })
