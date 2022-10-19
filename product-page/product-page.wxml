@@ -2,8 +2,7 @@
 	<view class="screen screen1"> 
   <button bindtap="onTap">Wishing list</button>
   <shoppiong-bag/> 
-
-		<block wx:for="{{products}}" wx:key="id" wx:for-item="product">
+		<block wx:for="{{products}}"  wx:for-item="product">
 			<view class="product" bindtap="showNext" data-idx="{{product}}">
 			<share-element class="avatar" key="avatar" duration="{{duration}}" transform="{{transformIdx === product-page}}">
           <product-component  class="products"  name= "{{product.name}} " price= "{{product.price}} "/>

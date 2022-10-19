@@ -1,7 +1,6 @@
-<!--wishList-page/wishList-page.wxml-->
-<!-- <view>{{total_size}}</view> -->
- <view wx:if="{{total_size == 0}}">Wishing list is empty please choose some products! </view>
-<view wx:else="{{total_size >0}}" 
+
+ <view wx:if="{{wishList== false}}">Wishing list is empty please choose some products! </view>
+<view wx:else="{{wishList== true}}" 
 	show="{{show}}"
 	overlay="{{overlay}}"
 	close-on-slide-down
@@ -15,7 +14,8 @@
   bindafterleave="onAfterLeave"
   bindclickoverlay="onClickOverlay"> 
   <shopping-bag/> 
-	<view class="screen screen2" > 
+	<view class="screen screen2"  > 
+  	<block wx:for="{{dataBase}}"  wx:for-item="dataBase[product]">
 		<view>
 			<image-element class="avatar" duration="{{duration}}" key="avatar" transform>
 				<image style="width: 0rpx;"  style="height: 500rpx;"  src="../images/{{product.img}}" />
@@ -24,7 +24,8 @@
         <detail-component class="product-detail" details= "{{product.details}}" />
 			</view>
 		</view>
-</view>
+  </block>
 
+</view>
 <button bindtap="goBack"> Go back to main page</button>
 </view>

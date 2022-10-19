@@ -1,8 +1,7 @@
 import {products} from '../data/products'
 import {navigate} from '../utils/util'
-import {once} from '../utils/event'
-let  page_data;
-let Database=[];
+const dataBase=[];
+let wishList=false ;
 Page({
   data: {
     products,
@@ -12,8 +11,6 @@ Page({
     duration: 300,
     show: false,
     overlay: false,
-    Database:[],
-    total_size:0
   },
   goBack(){
     const url= "../product-page/product-page"
@@ -36,22 +33,21 @@ Page({
     }})
   },
   onLoad: function (option) {
-    const that= this;
    const eventChannel = this.getOpenerEventChannel()
-   eventChannel.on( 'sendID' ,  function  ( data )  {
+   eventChannel.on( 'sendID' ,  data=>  {
       console.log("ID OF THE OBJECT SELECTED", data); 
-    page_data = data; 
-       Database[Database.length]= page_data;
-    that.setData({product: products[data.data-1]}) 
-    that.setData({total_size: Database.length})
-    console.log("SIZE OF DATABASE =",Database.length)
-    for(let i=0; i<Database.length;i++){
-      console.log("items",Database[i])
+       dataBase[dataBase.length]= data;
+       if(dataBase.length>0)
+       wishList=true;
+    this.setData({product: products[data.data-1] , wishList :wishList , dataBase: dataBase, } ) 
+    console.log("SIZE OF dataBase =",dataBase.length)
+    for(let i=0; i<4;i++){
+      console.log("items",dataBase[i])
     }
     })
     this.setData({
       show: true,
-      Database: this.data.Database
+      dataBase: this.data.dataBase
     });
 }
 })
