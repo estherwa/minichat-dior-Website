@@ -39,7 +39,7 @@ Page({
        dataBase[dataBase.length]= data;
        if(dataBase.length>0)
        wishList=true;
-    this.setData({product: products[data.data-1] , wishList :wishList , dataBase: dataBase, } ) 
+    this.setData({product: products[data.data-1] , wishList :wishList , dataBase: dataBase}) 
     console.log("SIZE OF dataBase =",dataBase.length)
     for(let i=0; i<4;i++){
       console.log("items",dataBase[i])
