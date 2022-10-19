@@ -1,7 +1,7 @@
 <!--wishList-page/wishList-page.wxml-->
-<view>{{ total_size}}</view>
- <view wx:if="{{if( total_size == 0)}}">Wishing list is empty please choose some products! </view>
-<view
+<!-- <view>{{total_size}}</view> -->
+ <view wx:if="{{total_size == 0}}">Wishing list is empty please choose some products! </view>
+<view wx:else="{{total_size >0}}" 
 	show="{{show}}"
 	overlay="{{overlay}}"
 	close-on-slide-down
@@ -15,27 +15,16 @@
   bindafterleave="onAfterLeave"
   bindclickoverlay="onClickOverlay"> 
   <shopping-bag/> 
-	<view class="screen screen2"> 
-		<!-- <view class="product">
-     
+	<view class="screen screen2"  > 
+		<view>
 			<image-element class="avatar" duration="{{duration}}" key="avatar" transform>
 				<image style="width: 0rpx;"  style="height: 500rpx;"  src="../images/{{product.img}}" />
 			</image-element>
 			<view class="paragraph {{show ? 'enter' : ''}}">
         <detail-component class="product-detail" details= "{{product.details}}" />
 			</view>
-		</view> -->
-  	<view class="screen screen2"> 
-		<view class="product">
-			<image-element class="avatar" duration="{{duration}}" key="avatar" transform>
-				<image style="width: 0rpx;"  style="height: 500rpx;"  src="../images/{{product.img}}" />
-			</image-element>
-			<view class="paragraph {{show ? 'enter' : ''}}">
-        <detail-component class="product-detail" details= "{{product.details}}" />
-			</view>
-    <button-component id_bag="{{product.id}}" title="Add to wish list"/>
 		</view>
 </view>
-</view>
+
 <button bindtap="goBack"> Go back to main page</button>
 </view>
