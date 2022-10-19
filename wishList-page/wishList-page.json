@@ -1,3 +1,8 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+  "product-component": "../components/product-component/product-component",
+  "shoppiong-bag":"../components/shopping-bag/shopping_bag",
+  "detail-component": "../components/details-component/details",
+  "button-component": "../components/button-component/button"
+}
 }

@@ -1,5 +1,6 @@
 <!--wishList-page/wishList-page.wxml-->
-<text>Your wishing list is empty please choose some products!</text>
+<view>{{ total_size}}</view>
+ <view wx:if="{{if( total_size == 0)}}">Wishing list is empty please choose some products! </view>
 <view
 	show="{{show}}"
 	overlay="{{overlay}}"
@@ -24,7 +25,6 @@
         <detail-component class="product-detail" details= "{{product.details}}" />
 			</view>
 		</view> -->
-  
   	<view class="screen screen2"> 
 		<view class="product">
 			<image-element class="avatar" duration="{{duration}}" key="avatar" transform>
@@ -37,4 +37,5 @@
 		</view>
 </view>
 </view>
+<button bindtap="goBack"> Go back to main page</button>
 </view>

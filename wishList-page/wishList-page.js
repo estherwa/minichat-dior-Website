@@ -2,7 +2,8 @@ import {products} from '../data/products'
 import {navigate} from '../utils/util'
 import {once} from '../utils/event'
 let  page_data;
-const Database=[];
+let Database=[];
+let total_size=0
 Page({
   data: {
     products,
@@ -12,6 +13,12 @@ Page({
     duration: 300,
     show: false,
     overlay: false,
+    Database:[],
+    total_size:0
+  },
+  goBack(){
+    const url= "../product-page/product-page"
+    navigate({url})
   },
   showPrev() {
     const url='../product-page/product-page';
@@ -31,21 +38,25 @@ Page({
   },
   onLoad: function (option) {
     const that= this;
+    if(Database.length==0)
+    {
+      //here we have to make 
+    }
    const eventChannel = this.getOpenerEventChannel()
    eventChannel.on( 'sendID' ,  function  ( data )  {
-    console.log("data que temnemos", data); 
+      console.log("ID OF THE OBJECT SELECTED", data); 
     page_data = data; 
-    Database[Database.length]= page_data;
-
-    that.setData({product: products[data.data-1]})
-    
-    console.log("SIZE BASE",Database.length)
+       Database[Database.length]= page_data;
+    that.setData({product: products[data.data-1]}) 
+    that.setData({total_size: Database.length})
+    console.log("SIZE OF DATABASE =",Database.length)
     for(let i=0; i<Database.length;i++){
-    console.log("items",Database[i])
+      console.log("items",Database[i])
   }
-    
-   
-
-})
+    })
+    this.setData({
+      show: true,
+      Database: this.data.Database
+    });
 }
 })
