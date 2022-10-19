@@ -15,7 +15,7 @@
   bindafterleave="onAfterLeave"
   bindclickoverlay="onClickOverlay"> 
   <shopping-bag/> 
-	<view class="screen screen2"  > 
+	<view class="screen screen2" > 
 		<view>
 			<image-element class="avatar" duration="{{duration}}" key="avatar" transform>
 				<image style="width: 0rpx;"  style="height: 500rpx;"  src="../images/{{product.img}}" />
