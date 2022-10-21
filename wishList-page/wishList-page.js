@@ -35,26 +35,19 @@ Page({
   },
   onLoad: function (option) {
    const eventChannel = this.getOpenerEventChannel()
-   eventChannel.on( 'sendID' ,  data=>  {
+   eventChannel.on( 'sendID' , data=>  {
       console.log("ID OF THE OBJECT SELECTED", data); 
        dataBase[dataBase.length]= data;
        if(dataBase.length>0)
        wishList=true;
-    
-   
     console.log("SIZE OF dataBase =",dataBase.length)
-
     productDataBase.push(products[data.data -1]);
-
-  this.setData({productDataBase:productDataBase,  wishList :wishList , dataBase: dataBase}) 
-    
+    this.setData({productDataBase:productDataBase, wishList :wishList , dataBase: dataBase}) 
     let temp
       for(let i=0; i<productDataBase.length;i++){
-      temp= productDataBase[i]
+          temp= productDataBase[i]
           console.log("temp", temp )
-        
-
-        console.log("items",dataBase[i])
+          console.log("items",dataBase[i])
       }
     })
     this.setData({
