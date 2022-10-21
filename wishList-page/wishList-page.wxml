@@ -15,8 +15,9 @@
   bindclickoverlay="onClickOverlay"> 
   <shopping-bag/> 
 	<view class="screen screen2"  > 
-  	<block wx:for="{{dataBase}}" wx:for-item="dataBase ">
+  	<block wx:for="{{productDataBase}}" wx:for-item="product">
 		<view>
+      <view>{{productDataBase.length}}</view>
 			<image-element class="avatar" duration="{{duration}}" key="avatar" transform>
 				<image style="width: 0rpx;"  style="height: 500rpx;"  src="../images/{{product.img}}" />
 			</image-element>

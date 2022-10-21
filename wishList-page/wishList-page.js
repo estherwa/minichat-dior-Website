@@ -1,6 +1,7 @@
 import {products} from '../data/products'
 import {navigate} from '../utils/util'
 const dataBase=[];
+const productDataBase=[];
 let wishList=false ;
 Page({
   data: {
@@ -39,11 +40,22 @@ Page({
        dataBase[dataBase.length]= data;
        if(dataBase.length>0)
        wishList=true;
-    this.setData({product: products[data.data-1] , wishList :wishList , dataBase: dataBase}) 
+    
+   
     console.log("SIZE OF dataBase =",dataBase.length)
-    for(let i=0; i<4;i++){
-      console.log("items",dataBase[i])
-    }
+
+    productDataBase.push(products[data.data -1]);
+
+  this.setData({productDataBase:productDataBase,  wishList :wishList , dataBase: dataBase}) 
+    
+    let temp
+      for(let i=0; i<productDataBase.length;i++){
+      temp= productDataBase[i]
+          console.log("temp", temp )
+        
+
+        console.log("items",dataBase[i])
+      }
     })
     this.setData({
       show: true,
