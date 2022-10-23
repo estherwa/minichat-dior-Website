@@ -17,6 +17,14 @@ Page({
     const url= "../product-page/product-page"
     navigate({url})
   },
+  deleteProduct(e){
+    console.log("hola")
+   const pressedBag=e.currentTarget.dataset.idx;
+    const number = (element) => element == pressedBag.id; 
+   const num=dataBase.findIndex(number);
+    dataBase.pop(num)
+    productDataBase.pop(products[num]);
+  }, 
   showPrev() {
     const url='../product-page/product-page';
     navigate({
@@ -37,7 +45,7 @@ Page({
    const eventChannel = this.getOpenerEventChannel()
    eventChannel.on( 'sendID' , data=>  {
       console.log("ID OF THE OBJECT SELECTED", data); 
-       dataBase[dataBase.length]= data;
+       dataBase.push(data.data ) ;
        if(dataBase.length>0)
        wishList=true;
     console.log("SIZE OF dataBase =",dataBase.length)

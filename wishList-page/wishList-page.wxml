@@ -15,9 +15,9 @@
   bindclickoverlay="onClickOverlay"> 
   <shopping-bag/> 
 	<view class="screen screen2"  > 
-  	<block wx:for="{{productDataBase}}" wx:for-item="product">
+  	<block wx:for="{{productDataBase}}"  product="{{item}}" wx:for-item="product">
 		<view>
-      <view>{{product.id}}</view>
+      <view data-idx="{{product}}" bindtap="deleteProduct" >🗑️</view>
 			<image-element class="avatar" duration="{{duration}}" key="avatar" transform>
 				<image style="width: 0rpx;"  style="height: 500rpx;"  src="../images/{{product.img}}" />
 			</image-element>
@@ -26,7 +26,6 @@
 			</view>
 		</view>
   </block>
-
 </view>
 <button bindtap="goBack"> Go back to main page</button>
 </view>

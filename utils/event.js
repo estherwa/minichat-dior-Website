@@ -5,12 +5,9 @@ function on (name , funct) {
   eventChannel.on(name, funct)
 }
 function once({name,eventChannel, funct}) {
-  
   eventChannel.once(name, funct)
 }
 function emit({res,name}) {
-
-  
   if (res){
     res.eventChannel.emit(name);
   }
